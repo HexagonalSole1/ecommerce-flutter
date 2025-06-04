@@ -1,5 +1,4 @@
 // lib/data/models/user_model.dart
-
 import '../../domain/entities/user.dart';
 
 class UserModel extends User {
@@ -37,10 +36,10 @@ class UserModel extends User {
     }
 
     return UserModel(
-      id: json['id'],
-      email: json['email'],
-      username: json['username'],
-      name: json['name'],
+      id: json['id'] ?? 0,
+      email: json['email'] ?? '',
+      username: json['username'] ?? '',
+      name: json['name'] ?? '',
       roles: parseRoles(json['roles']),
     );
   }
